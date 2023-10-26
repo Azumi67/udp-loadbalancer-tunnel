@@ -16,6 +16,7 @@
  <div dir="rtl">&bull; وایرگارد را در سرور خارج نصب نمایید</div>
  <div dir="rtl">&bull; تانل RTT هم بعدا به اسکریپت اضافه خواهد شد.</div>
  <div dir="rtl">&bull; پشتیبانی از amd64 و arm </div>
+ 
  ------------------------------------------------------
 
 <p align="right">
@@ -148,7 +149,7 @@ bash <(curl -s -L https://raw.githubusercontent.com/opiran-club/softether/main/o
 ------------------------
 
 ```
-
+apt install curl -y && bash <(curl -Ls https://raw.githubusercontent.com/Azumi67/udp-loadbalancer-tunnel/main/udp.sh --ipv4)
 ```
 
 
