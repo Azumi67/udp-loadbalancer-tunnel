@@ -68,7 +68,7 @@
   <div dir="rtl">&bull; ایپی 6 native ایران یا ایپی پرایوت ایران را وارد نمایید</div>
    <div dir="rtl">&bull; در صورتی که برای iran ipv6 address از ایپی پرایوت استفاده کردید برای kharej ipv6 address .هم از ایپی پرایوت استفاده نمایید</div>
     <div dir="rtl">&bull; همینطور اگر برای iran ipv6 address از ایپی 6 native استفاده کردید، برای kharej ipv6 address هم از ایپی 6 native استفاده نمایید</div>
-     <div dir="rtl">&bull; برای kharej ipv6 address همچنین میتوانید از 127.0.0.1 استفاده نمایید اما برای iran ipv6 address حتما از ایپی 6 سرور ایران استفاده نمایید</div>
+     <div dir="rtl">&bull; در صورت استفاده از ایپی 6 native برای تانل ،برای kharej ipv6 address همچنین میتوانید از 127.0.0.1 استفاده نمایید اما برای iran ipv6 address حتما از ایپی 6 سرور ایران استفاده نمایید</div>
       <div dir="rtl">&bull; پورت و توکن تانل رو مانند سرور ایران وارد نمایید</div>
  <div dir="rtl">&bull; پورت لودبالانس و پورت جدید وایرگارد خودتون رو که با نام iran wireguard port میباشد را وارد نمایید. مانند سرور ایران</div>
 
