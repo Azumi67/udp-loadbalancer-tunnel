@@ -23,6 +23,7 @@
   <img src="https://github.com/Azumi67/udp-loadbalancer-tunnel/assets/119934376/57112532-6845-4eab-9b42-1b680d7d88a5" alt="Image" /> <div dir="rtl">&bull; این پروژه اموزشی هست و اگر خطایی در لودبالانس دیدید لطفا به من اطلاع بدید</div>
 </p> 
   <div dir="rtl">&bull; برای اضافه کردن ایپی 6 native میتوانید از اسکریپت Opiran استفاده نمایید. لطفا به قسمت اسکریپت های کارامد رجوع کنید.</div>
+   <div dir="rtl">&bull; مسیر nginx در این directory میباشد >/etc/nginx/nginx.conf </div>
  
   -----------------------------------------
   
