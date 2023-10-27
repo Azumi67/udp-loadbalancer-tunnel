@@ -1086,7 +1086,7 @@ fi
 config_file="/etc/systemd/system/azumi-udp2raws.service"
 udp2raw_exec="/root/udp2raw_$cpu_arch"
 
-echo -e "\e[36mSelected protocol: \e[32m$raw_mode\e[0m"
+
 
 # service file
 cat << EOF > "$config_file"
@@ -1521,6 +1521,7 @@ function kharej__frp_tunnel() {
         printf "\e[93m╰────────────────────────────────────────────────────────────╯\e[0m\n"
 		# frpc.ini 
 rm frp_0.52.3_linux_amd64/frpc.ini
+rm frp_0.52.3_linux_arm64/frpc.ini
 # CPU architecture
 if [[ "$(uname -m)" == "x86_64" ]]; then
   cpu_arch="amd64"
@@ -1592,7 +1593,8 @@ function iran_frp_tunnel() {
 	
     read -e -p $'\e[33mEnter \e[92mloadbalancer\e[33m port: \e[0m' remote_port
 	printf "\e[93m╰──────────────────────────────────────────────────────╯\e[0m\n"
-  rm frp_0.52.3_linux_amd64/frpc.ini
+  rm frp_0.52.3_linux_amd64/frps.ini
+  rm frp_0.52.3_linux_arm64/frps.ini
     # frps.ini
 	# CPU architecture
 if [[ "$(uname -m)" == "x86_64" ]]; then
