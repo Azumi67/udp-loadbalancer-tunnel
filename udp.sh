@@ -1480,22 +1480,19 @@ function kharej__frp_tunnel() {
   echo -e "\e[93m'------------------------------------------------------------------------------------------------'\e[0m"
   display_notification $'\e[93mStarting FRP Wireguard tunnel...\e[0m'
   
-   # Kharej IPv6 configuration
-        printf "\e[93m╭────────────────────────────────────────────────────────────╮\e[0m\n"
-        read -e -p $'\e[93mEnter \e[92mIran\e[93m IPv6 address [Private or Native]: \e[0m' server_addr
-        read -e -p $'\e[93mEnter \e[92mKharej\e[93m IPv6 address [Private or Native]: \e[0m' local_ip
-		
-        read -e -p $'\e[93mEnter \e[92mtunnel\e[93m port [Same port: 443]: \e[0m' server_port
+  # Kharej IPv6 configuration
+printf "\e[93m╭────────────────────────────────────────────────────────────╮\e[0m\n"
+read -e -p $'\e[93mEnter \e[92mtunnel\e[93m port [Same port: 443]: \e[0m' server_port
 	
-        read -e -p $'\e[93mEnter \e[92mToken\e[93m key [Same Password]: \e[0m' token
+read -e -p $'\e[93mEnter \e[92mToken\e[93m key [Same Password]: \e[0m' token
 	
-        read -e -p $'\e[93mEnter \e[92mLoadbalancer\e[93m port: \e[0m' local_port
-		
-        read -p $'\e[93mEnter \e[92mIran\e[93m Wireguard port [This is your new wireguard port]: \e[0m' remote_port
-        printf "\e[93m╰────────────────────────────────────────────────────────────╯\e[0m\n"
-		# frpc.ini 
-rm frp_0.52.3_linux_amd64/frpc.ini
-rm frp_0.52.3_linux_arm64/frpc.ini
+read -e -p $'\e[93mEnter \e[92mLoadbalancer\e[93m port: \e[0m' local_port
+	
+read -p $'\e[93mEnter \e[92mIran\e[93m Wireguard port [This is your new wireguard port]: \e[0m' remote_port
+printf "\e[93m╰────────────────────────────────────────────────────────────╯\e[0m\n"
+# frpc.ini 
+rm /root/frp_0.52.3_linux_amd64/frpc.ini
+rm /root/frp_0.52.3_linux_arm64/frpc.ini
 # CPU architecture
 if [[ "$(uname -m)" == "x86_64" ]]; then
   cpu_arch="amd64"
@@ -1511,13 +1508,12 @@ config_file="/root/frp_0.52.3_linux_$cpu_arch/frpc.ini"
 
 # frpc.ini
 echo "[common]
-server_addr = $server_addr
 server_port = $server_port
 token = $token
 
 [wireguard]
 type = udp
-local_ip = $local_ip
+local_ip = 127.0.0.1
 local_port = $local_port
 remote_port = $remote_port
 use_encryption = true
@@ -1537,13 +1533,13 @@ User=root
 [Install]
 WantedBy=multi-user.target" | sudo tee "$service_file" &>/dev/null
 
-    display_checkmark $'\e[92mKharej Wireguard Tunnel has been completed successfully!\e[0m \e[91mYours Truly, Azumi\e[0m'
-      # additional commands for Kharej side
-    sudo systemctl daemon-reload
-    sudo systemctl enable azumifrpc
-    sudo systemctl start azumifrpc
-	display_loading
-	display_checkmark $'\e[92mFRP Wireguard tunnel setup has been completed successfully!\e[0m'
+display_checkmark $'\e[92mKharej Wireguard Tunnel has been completed successfully!\e[0m \e[91mYours Truly, Azumi\e[0m'
+# additional commands for Kharej side
+sudo systemctl daemon-reload
+sudo systemctl enable azumifrpc
+sudo systemctl start azumifrpc
+display_loading
+display_checkmark $'\e[92mFRP Wireguard tunnel setup has been completed successfully!\e[0m'
 }
 function iran_frp_tunnel() {
 # Iran configuration
