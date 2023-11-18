@@ -62,14 +62,13 @@
 
 --------------------------------------
 **لود بالانس با تانل FRP - سرور خارج**
+
 <p align="right">
-  <img src="https://github.com/Azumi67/udp-loadbalancer-tunnel/assets/119934376/6d370703-4a13-474f-a544-50bb5714540f" alt="Image" />
+  <img src="https://github.com/Azumi67/udp-loadbalancer-tunnel/assets/119934376/8bbbfe7f-c186-446c-a1d6-be1da7e43552" alt="Image" />
 </p>
  <div dir="rtl">&bull; چون لود بالانس تک پورت استفاده میکنیم پس تنها به یک ایپی 6 برای سرور ایران و خارج نیاز داریم</div>
   <div dir="rtl">&bull; ایپی 6 native ایران یا ایپی پرایوت ایران را وارد نمایید</div>
-   <div dir="rtl">&bull; در صورتی که برای iran ipv6 address از ایپی پرایوت استفاده کردید برای kharej ipv6 address .هم از ایپی پرایوت استفاده نمایید</div>
-    <div dir="rtl">&bull; همینطور اگر برای iran ipv6 address از ایپی 6 native استفاده کردید، برای kharej ipv6 address هم از ایپی 6 native استفاده نمایید</div>
-     <div dir="rtl">&bull; در صورت استفاده از ایپی 6 native برای تانل ،برای kharej ipv6 address همچنین میتوانید از 127.0.0.1 استفاده نمایید اما برای iran ipv6 address حتما از ایپی 6 سرور ایران استفاده نمایید</div>
+   <div dir="rtl">&bull; اسکریپت را اپدیت کردم تا از لوکال ایپی استفاده شود</div>
       <div dir="rtl">&bull; پورت و توکن تانل رو مانند سرور ایران وارد نمایید</div>
  <div dir="rtl">&bull; پورت لودبالانس و پورت جدید وایرگارد خودتون رو که با نام iran wireguard port میباشد را وارد نمایید. مانند سرور ایران</div>
 
